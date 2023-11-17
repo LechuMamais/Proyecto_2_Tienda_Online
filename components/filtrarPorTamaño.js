@@ -9,4 +9,7 @@ export const filtrarPorTamaño = (products, sizeFilter, productosFiltradosPorTam
         productosFiltradosPorTamaño.push(product);
       }
     }
+
+    // Tal vez lo podía hacer con un filter!
+    /*const productosFiltradosPorTamaño = products.filter( product => product.tamaño ===sizeFilter.value)*/
 }
