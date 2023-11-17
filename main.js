@@ -1,42 +1,45 @@
 import './style.css'
 import { products } from './data/products';
 import { mostrarProducto } from './components/mostrarProducto';
+import { filtrarPorTamaño } from './components/filtrarPorTamaño';
+import { filtrarPorPrecio } from './components/filtrarPorPrecio';
 
 //Components:
 import { Header } from './components/Header';
 import { Filtros } from './components/Filtros';
 
 
-// Mostramos los componentes:
-Header();
-Filtros(products);
-
 
 const app = document.getElementById('app')
 
-const sizeFilter = document.getElementById('size-filter');
+// Mostramos los componentes:
+Header(app);
+const main = document.createElement('main');
+app.appendChild(main)
 
+Filtros(main, products);
+
+
+
+
+
+
+// Section donde se mostrarán los productos:
 const productList = document.createElement('section');
 productList.setAttribute('id', 'product-list',);
-app.appendChild(productList)
+main.appendChild(productList)
+
+// Mostrar de entrada todos los productos
+for (let i = 0; i < products.length; i++) {
+  mostrarProducto(products[i], productList)
+}
 
 
 //        --------------------------------------------  FUNCION DE FILTRAR POR TAMAÑO -------------------------------------------------        //
 
+const sizeFilter = document.getElementById('size-filter');
 
-sizeFilter.addEventListener('change', function () {
-  productList.innerHTML = '';
-  const selectedSeller = sizeFilter.value;
-
-  for (let i = 0; i < products.length; i++) {
-    const product = products[i];
-
-
-    if (selectedSeller === 'all' || product.tamaño === selectedSeller) {
-      mostrarProducto(product, productList)
-    }
-  }
-});
+filtrarPorTamaño(products, sizeFilter, productList)
 
 
 
@@ -46,21 +49,10 @@ sizeFilter.addEventListener('change', function () {
 
 
 const priceFilter = document.getElementById('price-filter');
-const searchButton = document.getElementById('search-button');
-
-searchButton.addEventListener('click', function () {
-  const maxPrice = parseFloat(priceFilter.value);
 
 
-  productList.innerHTML = '';
 
-  products.forEach(function (product) {
-    if (product.price < maxPrice) {
-      mostrarProducto(product, productList)
-    }
-  });
-});
-
+filtrarPorPrecio(products, priceFilter, productList)
 
 
 

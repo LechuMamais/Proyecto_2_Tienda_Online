@@ -1,14 +1,15 @@
-export function Filtros(products) {
-    // Creamos un elemento header
+export function Filtros(app, products) {
+    // Creamos la section de los filtros
     var filtros = document.createElement('section');
     filtros.setAttribute('id', 'filter-products');
+
     var filtrosTitle = document.createElement('h4');
     filtrosTitle.textContent = 'Filtrar Productos';
 
 
 
 
-    // Filtrar por tamaño
+    // Creamos el filtro por tamaño
     var spanFilterTamaño = document.createElement('span');
     spanFilterTamaño.textContent = 'Filtrar por Tamaño: ';
     var sizeFilterSelect = document.createElement('select');
@@ -47,7 +48,7 @@ function crearOption(arr) {
   
 
 
-    // Filtrar por Precio
+    // Creamoe el filtro por Precio
     var filterPrecio = document.createElement('div');
     var spanFilterPrecio = document.createElement('span');
     spanFilterPrecio.textContent = 'Filtrar por Precio: ';
@@ -77,5 +78,5 @@ function crearOption(arr) {
 
   
     // Mostramos la section en app
-    document.getElementById('app').appendChild(filtros);
+    app.appendChild(filtros);
   }

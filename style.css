@@ -22,6 +22,7 @@
 
 /*    BOX SHADOW      */
 --my-box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+--my-box-shadow-hover: 0px 10px 15px -3px rgba(0,0,0,0.25);
 
   /*    SPACINGS  */
 --margin-xs: 0.5rem ;
@@ -57,14 +58,28 @@ ul, ol{
   list-style: none;
 }
 
+main{
+  display: flex;
+  flex-direction: row;
+  gap: var(--gap-xl);
+}
+
+@media (max-width: 1250px) {
+  main{
+
+    flex-direction: column;
+    gap: var(--gap-m);
+  }
+}
+
 header{
   width: 100%;
-
   height: 100px;
   margin: 0;
   padding: 0.5rem 0rem;
   padding-top: var(--padding-xl);
   text-align: center;
+  box-shadow: var(--my-box-shadow);
 }
 
 #filter-products{
@@ -87,7 +102,7 @@ header{
 
 /* ----------------------------------------------------------   ESTILOS DE LAS CARTAS DE PRODUCTOS   --------------------------------------*/
 #product-list{
-  padding: var(--padding-l);
+  padding: var(--padding-l) 0px;
   width: 100vw;
   display: flex;
   flex-direction: row;
@@ -109,6 +124,11 @@ header{
   align-items:center ;
   gap: var(--gap-s);
   padding-bottom: var(--margin-m);
+  transition: all 600ms ;
+}
+.product-card:hover{
+  scale: 1.025;
+  box-shadow: var(--my-box-shadow-hover);
 }
 
 .product-card img{

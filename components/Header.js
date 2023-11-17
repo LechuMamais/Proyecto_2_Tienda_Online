@@ -1,4 +1,4 @@
-export function Header() {
+export function Header(app) {
   // Creamos un elemento header
   var header = document.createElement('header');
 
@@ -16,5 +16,5 @@ export function Header() {
   link.appendChild(imagen);
 
   // Pintamos el header en el app
-  document.getElementById('app').appendChild(header);
+  app.appendChild(header);
 }
