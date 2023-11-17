@@ -18,3 +18,6 @@ export const filtrarPorPrecio = (products, priceFilter, productList) => {
       });
     });
   }
+
+
+  

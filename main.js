@@ -34,6 +34,9 @@ for (let i = 0; i < products.length; i++) {
   mostrarProducto(products[i], productList)
 }
 
+// Array donde se van a ir metiendo los productos filtrados
+let filteredProducts = []
+
 
 //        --------------------------------------------  FUNCION DE FILTRAR POR TAMAÑO -------------------------------------------------        //
 
@@ -57,4 +60,9 @@ filtrarPorPrecio(products, priceFilter, productList)
 
 
 
+
 // Me falta COMBINAR AMBOS FILTROS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//        --------------------------------------------  BOTON, QUE ACTIVA LOS FILTROS  -------------------------------------------------        //
+
+
+

@@ -1,7 +1,7 @@
 //        --------------------------------------------  FUNCION DE FILTRAR POR TAMAÑO -------------------------------------------------        //
 
-
 import { mostrarProducto } from "./mostrarProducto";
+
 
 //                                array      filtro   donde mostrar
 export const filtrarPorTamaño = (products, sizeFilter, productList) => {
