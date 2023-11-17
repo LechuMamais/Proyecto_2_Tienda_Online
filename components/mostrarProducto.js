@@ -1,5 +1,4 @@
 export const mostrarProducto = (product, productList) => {
-        console.log(product, productList)
         const productElement = document.createElement('div');
         productElement.innerHTML = `
     <div class='product-card'>

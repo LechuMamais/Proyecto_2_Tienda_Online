@@ -28,7 +28,6 @@ for(var i=0; i<products.length; i++){
         tamaños.push(products[i].tamaño)
     }
 }
-console.log(tamaños);
 
 
 // Función que recorre un array y muestra cada elemento en el DOM

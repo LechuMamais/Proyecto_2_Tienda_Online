@@ -89,13 +89,17 @@ header{
   gap: var(--gap-m);
   text-align: center;
 }
-#filter-products select{
+#filter-products select,
+#filter-products button{
   margin: 0 auto;
-  max-width: 300px;
+  padding:var(--padding-xs)  var(--padding-s);
 }
 #filter-products input{
   margin-left: var(--margin-s);
   margin-right: var(--margin-s);
+  padding: var(--padding-xs);
+  padding-right: 0;
+
 }
 
 

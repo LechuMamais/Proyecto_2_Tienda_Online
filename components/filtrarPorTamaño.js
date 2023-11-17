@@ -1,18 +1,12 @@
 //        --------------------------------------------  FUNCION DE FILTRAR POR TAMAÑO -------------------------------------------------        //
 
-import { mostrarProducto } from "./mostrarProducto";
 
-
-//                                array      filtro   donde mostrar
-export const filtrarPorTamaño = (products, sizeFilter, productList) => {
-  sizeFilter.addEventListener('change', function () {
-    productList.innerHTML = '';
-    const selectedSize = sizeFilter.value;
+//                                array      filtro   array de produc filtrados
+export const filtrarPorTamaño = (products, sizeFilter, productosFiltradosPorTamaño) => {
     for (let i = 0; i < products.length; i++) {
-      const product = products[i];
-      if (selectedSize === 'all' || product.tamaño === selectedSize) {
-        mostrarProducto(product, productList)
+      let product = products[i];
+      if (product.tamaño === sizeFilter.value) {
+        productosFiltradosPorTamaño.push(product);
       }
     }
-  });
 }
