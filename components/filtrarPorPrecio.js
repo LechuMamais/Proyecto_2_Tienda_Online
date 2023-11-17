@@ -13,3 +13,4 @@ export const filtrarPorPrecio = (products, priceFilter, filteredProducts) => {
   };
 }
 
+// Tal vez lo podría haber hecho con un filter!
