@@ -26,6 +26,8 @@ export const botonBuscar = (products, sizeFilter, priceFilter, productList, filt
 
         mostrarProducto(element, productList)
     });
+    // limpiamos el input
+    document.querySelector('#price-filter').value = ''
     console.log(filteredProducts)
     // Si no hay resultados, lo mostramos en un texto
     if(filteredProducts.length == 0){
@@ -34,5 +36,6 @@ export const botonBuscar = (products, sizeFilter, priceFilter, productList, filt
         noResults.textContent = 'No hay resultados para tu búsqueda. Prueba cambiar los valores de los filtros!'
         productList.appendChild(noResults)
     }
+
 };
 
